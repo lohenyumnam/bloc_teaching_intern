@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:bloc_teaching_intern/src/color/page/page.dart';
 import 'package:bloc_teaching_intern/src/home/data/logic/logic.dart';
 import 'package:bloc_teaching_intern/src/home/page/page.dart';
 import 'package:flutter/material.dart';
@@ -42,6 +43,17 @@ class HomePage extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => const HomeDetailsPage(),
+                ),
+              );
+            },
+          ),
+          ElevatedButton(
+            child: const Text('Open Color list'),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ColorListPage(),
                 ),
               );
             },
